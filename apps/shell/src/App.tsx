@@ -36,9 +36,9 @@ const LoadingFallback: React.FC<{ name: string }> = ({ name }) => (
 
 const HomePage: React.FC = () => (
   <div style={{ textAlign: "center", padding: "60px 20px" }}>
-    {/* <h1 style={{ fontSize: "48px", marginBottom: "8px" }}>🍽️</h1> */}
+    <h1 style={{ fontSize: "48px", marginBottom: "8px" }}>🍽️</h1>
     <h1 style={{ fontSize: "36px", color: "#1a1a2e", marginBottom: "12px" }}>
-      Welcome to 
+      Welcome to Foddie
     </h1>
     <p style={{ fontSize: "18px", color: "#666", marginBottom: "32px" }}>
       Your favorite restaurants, delivered to your door.

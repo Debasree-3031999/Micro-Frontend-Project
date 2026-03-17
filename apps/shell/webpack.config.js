@@ -2,13 +2,26 @@ const HtmlWebpackPlugin = require("html-webpack-plugin");
 const { ModuleFederationPlugin } = require("webpack").container;
 const path = require("path");
 
+// Check if we're building for production (Vercel) or development (localhost)
+const isProduction = process.env.NODE_ENV === "production";
+
+// Remote app URLs — change these to your actual Vercel URLs after deploying remotes
+const REMOTE_URLS = {
+  restaurant: isProduction
+    ? "https://foodie-restaurent.vercel.app"
+    : "http://localhost:3001",
+  cart: isProduction
+    ? "https://foodie-cart-orcin.vercel.app"
+    : "http://localhost:3002",
+};
+
 module.exports = {
   entry: "./src/index.ts",
+  mode: isProduction ? "production" : "development",
 
   output: {
-    // Where Webpack puts the built files
     path: path.resolve(__dirname, "dist"),
-    publicPath: "http://localhost:3000/",
+    publicPath: "auto",  // "auto" lets Webpack figure out the correct URL in any environment
   },
 
   resolve: {
@@ -38,6 +51,7 @@ module.exports = {
     // This is the core of micro frontend architecture.
     // The Shell app acts as the HOST — it loads other apps at runtime.
     new ModuleFederationPlugin({
+      
       // Unique name for this app in the federation
       name: "shell",
 
@@ -47,8 +61,8 @@ module.exports = {
       // - "remoteName" must match the remote's ModuleFederationPlugin `name`
       // - The URL points to where the remote's remoteEntry.js is served
       remotes: {
-        restaurant: "restaurant@http://localhost:3001/remoteEntry.js",
-        cart: "cart@http://localhost:3002/remoteEntry.js",
+        restaurant: `restaurant@${REMOTE_URLS.restaurant}/remoteEntry.js`,
+        cart: `cart@${REMOTE_URLS.cart}/remoteEntry.js`,
       },
 
       // SHARED: Dependencies that should be loaded ONCE across all micro frontends.

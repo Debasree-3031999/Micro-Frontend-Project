@@ -1,5 +1,37 @@
+# Dependencies
 node_modules/
+
+# Build output
 dist/
+
+# Turborepo cache
 .turbo/
+
+# Vercel
+.vercel/
+
+# Logs
 *.log
+npm-debug.log*
+pnpm-debug.log*
+
+# OS files
 .DS_Store
+Thumbs.db
+
+# IDE
+.idea/
+.vscode/
+*.swp
+*.swo
+
+# Environment variables
+.env
+.env.local
+.env.*.local
+
+# TypeScript cache
+*.tsbuildinfo
+
+# Coverage
+coverage/

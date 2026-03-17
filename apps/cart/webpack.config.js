@@ -2,12 +2,15 @@ const HtmlWebpackPlugin = require("html-webpack-plugin");
 const { ModuleFederationPlugin } = require("webpack").container;
 const path = require("path");
 
+const isProduction = process.env.NODE_ENV === "production";
+
 module.exports = {
   entry: "./src/index.ts",
+  mode: isProduction ? "production" : "development",
 
   output: {
     path: path.resolve(__dirname, "dist"),
-    publicPath: "http://localhost:3002/",
+    publicPath: "auto",  // "auto" works for both localhost and Vercel
   },
 
   resolve: {
