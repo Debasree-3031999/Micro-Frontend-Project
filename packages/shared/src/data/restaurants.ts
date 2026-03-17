@@ -1,0 +1,88 @@
+import { Restaurant } from "../types";
+
+export const restaurants: Restaurant[] = [
+  {
+    id: "1",
+    name: "Pizza Paradise",
+    cuisine: "Italian",
+    rating: 4.5,
+    deliveryTime: "25-35 min",
+    image: "🍕",
+    menu: [
+      { id: "1-1", name: "Margherita Pizza", description: "Classic tomato, mozzarella & basil", price: 12.99, image: "🍕" },
+      { id: "1-2", name: "Pepperoni Pizza", description: "Loaded with pepperoni & cheese", price: 14.99, image: "🍕" },
+      { id: "1-3", name: "Garlic Bread", description: "Crispy bread with garlic butter", price: 5.99, image: "🧄" },
+      { id: "1-4", name: "Caesar Salad", description: "Romaine, croutons, parmesan", price: 8.99, image: "🥗" },
+    ],
+  },
+  {
+    id: "2",
+    name: "Burger Barn",
+    cuisine: "American",
+    rating: 4.3,
+    deliveryTime: "20-30 min",
+    image: "🍔",
+    menu: [
+      { id: "2-1", name: "Classic Cheeseburger", description: "Beef patty, cheddar, lettuce, tomato", price: 10.99, image: "🍔" },
+      { id: "2-2", name: "Bacon Deluxe", description: "Double patty with crispy bacon", price: 13.99, image: "🥓" },
+      { id: "2-3", name: "Crispy Fries", description: "Golden seasoned fries", price: 4.99, image: "🍟" },
+      { id: "2-4", name: "Milkshake", description: "Thick vanilla milkshake", price: 6.99, image: "🥤" },
+    ],
+  },
+  {
+    id: "3",
+    name: "Sushi Sensation",
+    cuisine: "Japanese",
+    rating: 4.7,
+    deliveryTime: "30-40 min",
+    image: "🍣",
+    menu: [
+      { id: "3-1", name: "Salmon Nigiri (4pc)", description: "Fresh salmon on seasoned rice", price: 11.99, image: "🍣" },
+      { id: "3-2", name: "Dragon Roll", description: "Eel, avocado, cucumber", price: 15.99, image: "🐉" },
+      { id: "3-3", name: "Miso Soup", description: "Traditional soybean soup", price: 3.99, image: "🍜" },
+      { id: "3-4", name: "Edamame", description: "Steamed & salted soybeans", price: 5.49, image: "🫘" },
+    ],
+  },
+  {
+    id: "4",
+    name: "Taco Town",
+    cuisine: "Mexican",
+    rating: 4.4,
+    deliveryTime: "15-25 min",
+    image: "🌮",
+    menu: [
+      { id: "4-1", name: "Chicken Tacos (3pc)", description: "Grilled chicken, salsa, cilantro", price: 9.99, image: "🌮" },
+      { id: "4-2", name: "Beef Burrito", description: "Loaded with rice, beans & cheese", price: 11.99, image: "🌯" },
+      { id: "4-3", name: "Guacamole & Chips", description: "Fresh avocado dip with tortilla chips", price: 6.99, image: "🥑" },
+      { id: "4-4", name: "Churros", description: "Cinnamon sugar fried dough", price: 4.99, image: "🍩" },
+    ],
+  },
+  {
+    id: "5",
+    name: "Curry House",
+    cuisine: "Indian",
+    rating: 4.6,
+    deliveryTime: "25-35 min",
+    image: "🍛",
+    menu: [
+      { id: "5-1", name: "Butter Chicken", description: "Creamy tomato-based chicken curry", price: 13.99, image: "🍛" },
+      { id: "5-2", name: "Paneer Tikka", description: "Grilled cottage cheese with spices", price: 11.99, image: "🧀" },
+      { id: "5-3", name: "Garlic Naan", description: "Fresh baked flatbread", price: 3.49, image: "🫓" },
+      { id: "5-4", name: "Mango Lassi", description: "Sweet mango yogurt drink", price: 4.99, image: "🥭" },
+    ],
+  },
+  {
+    id: "6",
+    name: "Noodle Nirvana",
+    cuisine: "Chinese",
+    rating: 4.2,
+    deliveryTime: "20-30 min",
+    image: "🍜",
+    menu: [
+      { id: "6-1", name: "Kung Pao Chicken", description: "Spicy chicken with peanuts", price: 12.49, image: "🍗" },
+      { id: "6-2", name: "Fried Rice", description: "Wok-fried rice with vegetables & egg", price: 9.99, image: "🍚" },
+      { id: "6-3", name: "Spring Rolls (4pc)", description: "Crispy vegetable rolls", price: 5.99, image: "🥟" },
+      { id: "6-4", name: "Wonton Soup", description: "Pork dumplings in clear broth", price: 6.99, image: "🥟" },
+    ],
+  },
+];

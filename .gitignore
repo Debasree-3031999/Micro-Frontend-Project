@@ -1,1 +1,5 @@
-/understanding.txt.txt
+node_modules/
+dist/
+.turbo/
+*.log
+.DS_Store
