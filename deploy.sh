@@ -30,7 +30,7 @@ deploy_cart() {
 deploy_shell() {
   echo "========== Building Shell =========="
   cd "$ROOT_DIR/apps/shell"
-  NODE_ENV=production pnpm build
+  pnpm build
   echo "========== Deploying Shell =========="
   vercel deploy --prod
 }
