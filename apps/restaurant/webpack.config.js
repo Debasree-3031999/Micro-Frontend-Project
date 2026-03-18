@@ -10,7 +10,7 @@ module.exports = {
 
   output: {
     path: path.resolve(__dirname, "dist"),
-    publicPath: "auto",  // "auto" works for both localhost and Vercel
+    publicPath: "auto",
   },
 
   resolve: {
@@ -74,6 +74,7 @@ module.exports = {
 
     new HtmlWebpackPlugin({
       template: "./public/index.html",
+      publicPath: "/",
     }),
   ],
 

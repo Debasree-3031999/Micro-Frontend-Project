@@ -88,7 +88,8 @@ module.exports = {
     }),
     // ─── INGREDIENT 5: HTML Plugin ───
     new HtmlWebpackPlugin({
-      template: "./public/index.html", // "Generate an index.html and inject my JS into it"
+      template: "./public/index.html",
+      publicPath: "/",
     }),
   ],
 
